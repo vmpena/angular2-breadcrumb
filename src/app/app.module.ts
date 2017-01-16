@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
+import { CustomerService } from './customer/customer-service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,10 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
     RouterModule,
     routes
   ],
-  providers: [routingProviders],
+  providers: [
+    routingProviders,
+    CustomerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

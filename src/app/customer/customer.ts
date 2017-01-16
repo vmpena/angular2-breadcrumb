@@ -8,7 +8,7 @@
     name: string;
   }
 
-  export class Customer {
+  export interface Customer {
     ID: number;
     isActive: boolean;
     balance: string;

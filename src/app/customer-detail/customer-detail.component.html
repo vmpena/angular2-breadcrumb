@@ -2,4 +2,68 @@
 <p>
   Customer detail info found below.
 </p>
-<p><img src="http://placehold.it/350x150"></p>
+<p></p>
+
+<!-- placeholder -->
+<div class='panel panel-primary' *ngIf='customer'>
+  <div class='panel-heading' style='font-size:large'>
+    {{pageTitle}}
+  </div>
+
+  <div class='panel-body'>
+    <div class='row'>
+      <div class='col-md-6'>
+        <div class='row'>
+          <div class='col-md-3'><b>Customer ID:</b></div>
+          <div class='col-md-6'>{{customer.ID}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'><b>Name:</b></div>
+          <div class='col-md-6'>{{customer.name.first}} {{customer.name.last}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'><b>Email:</b></div>
+          <div class='col-md-6'>{{customer.email}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'><b>Is Active</b></div>
+          <div class='col-md-6'>{{customer.isActive}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'><b>Description:</b></div>
+          <div class='col-md-6'>{{customer.description}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'><b>Phone Number:</b></div>
+          <div class='col-md-6'>{{customer.phone}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'><b>Balance:</b></div>
+          <div class='col-md-6'>{{customer.balance}}</div>
+        </div>
+
+
+        <div class='row'>
+          <div class='col-md-3'><i>Friends</i></div>
+          <div class='col-md-6'></div>
+        </div>
+        <div *ngFor='let friend of customer.friends'>
+          <div class='row'>
+            <div class='col-md-3'>Name: </div>
+            <div class='col-md-6'>{{friend.name}} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <img src="http://placehold.it/350x350">
+      </div>
+    </div>
+  </div>
+
+  <div class='panel-footer'>
+    <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+      <i class='glyphicon glyphicon-chevron-left'></i> Back
+    </a>
+  </div>
+</div>
