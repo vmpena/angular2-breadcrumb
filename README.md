@@ -1,7 +1,10 @@
-# Angular2Breadcrumb
+# Angular2 Breadcrumb
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
-This branch uses Bootstrap 3.37
+This branch uses Bootstrap 3.37. 
+
+## Component Relative Paths
+The components use relative paths as specified in the Angular documentation: [Component-Relative-Paths](https://angular.io/docs/ts/latest/cookbook/component-relative-paths.html)
 
 ## Demo
 [https://mikelunn.github.io/angular2-breadcrumb/
